@@ -12,8 +12,8 @@
     "deploy-storybook": "storybook-to-ghpages",
     "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out",
     "lint": "lerna run lint",
-    "precommit": "if git-branch-is dfds; then yarn lint; fi",
-    "prepush": "yarn deploy-to-ghPages"
+    "precommit": "yarn lint",
+    "prepush": "if git-branch-is master; then yarn deploy-to-ghPages; fi"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
