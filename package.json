@@ -4,10 +4,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "husky": {
-    "pre-commit": "yarn lint",
-    "pre-push": "yarn deploy-to-ghPages"
-  },
   "scripts": {
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "bootstrap": "lerna bootstrap --use-workspaces",
@@ -15,7 +11,9 @@
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "storybook-to-ghpages",
     "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out",
-    "lint": "eslint --fix --ext .js ./src"
+    "lint": "lerna run lint",
+    "precommit": "yarn lint",
+    "prepush": "yarn deploy-to-ghPages"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
