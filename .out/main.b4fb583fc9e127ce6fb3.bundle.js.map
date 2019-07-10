@@ -1,1 +1,0 @@
-{"version":3,"file":"main.b4fb583fc9e127ce6fb3.bundle.js","sources":["webpack:///./packages/button/src/index.js"],"sourcesContent":["import React from 'react';\n\nconst Button = () => (\n    <button type=\"button\">Click Me</button>\n);\n\nexport default Button;"],"mappings":"AAAA","sourceRoot":""}

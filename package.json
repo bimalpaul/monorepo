@@ -7,9 +7,10 @@
   "scripts": {
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "dev": "start-storybook -p 5555",
+    "story": "start-storybook -p 5555",
     "build-storybook": "build-storybook -c .storybook -o .out",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",

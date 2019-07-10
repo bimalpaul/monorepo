@@ -1,4 +1,5 @@
 .log
 .jest-*
 lib
+.out
 node_modules
