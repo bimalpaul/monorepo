@@ -6,4 +6,5 @@
 Build using lerna
 
 
-Storybook : https://bimalpaul.github.io/
+[Storybook hosted on GH Pages](https://bimalpaul.github.io/).
+
