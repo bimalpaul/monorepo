@@ -1,0 +1,4 @@
+.log
+.jest-*
+lib
+node_modules
