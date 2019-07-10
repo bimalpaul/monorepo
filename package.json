@@ -12,7 +12,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out",
     "lint": "lerna run lint",
-    "precommit": "if branch is sd; then yarn lint; fi",
+    "precommit": "if git-branch-is dfds; then yarn lint; fi",
     "prepush": "yarn deploy-to-ghPages"
   },
   "devDependencies": {
