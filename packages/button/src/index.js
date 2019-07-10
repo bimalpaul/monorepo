@@ -1,13 +1,7 @@
-import styled from 'styled-components';
+import React from 'react';
 
-const Button = styled.button`
-    background: yellow;
-    color: red;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 300;
-    padding: 9px 36px;        
-`;
+const Button = () => (
+    <button type="button">Click Me</button>
+);
 
 export default Button;
