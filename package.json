@@ -12,7 +12,7 @@
     "deploy-storybook": "storybook-to-ghpages",
     "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out",
     "lint": "lerna run lint",
-    "precommit": "yarn lint",
+    "precommit": "if branch is sd; then yarn lint; fi",
     "prepush": "yarn deploy-to-ghPages"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
+    "git-branch-is": "^2.1.0",
     "husky": "^3.0.0",
     "lerna": "^3.13.1",
     "react": "^16.8.6",
