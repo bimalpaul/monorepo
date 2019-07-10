@@ -4,13 +4,18 @@
   "workspaces": [
     "packages/*"
   ],
+  "husky": {
+    "pre-commit": "yarn lint",
+    "pre-push": "yarn deploy-to-ghPages"
+  },
   "scripts": {
     "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "story": "start-storybook -p 5555",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "deploy-storybook": "storybook-to-ghpages",
-    "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out"
+    "deploy-to-ghPages": "yarn deploy-storybook -- --out=.out",
+    "lint": "eslint --fix --ext .js ./src"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
@@ -22,6 +27,12 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.0",
     "lerna": "^3.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
